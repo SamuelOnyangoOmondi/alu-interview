@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 """
     In a text file, there is a single character H.
     Your text editor can execute only two operations in this file:
@@ -8,17 +9,13 @@
     in exactly n H characters in the file.
 """
 
-def min_operations(n):
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
-    i = 2
-    operations = 0
-    while i <= n:
-        while n % i == 0:
-            operations += i
-            n = n // i
-        i += 1
-    return operations
 
+def minOperations(n):
+    nOpe = 0
+    minOpe = 2
+    while n > 1:
+        while n % minOpe == 0:
+            nOpe += minOpe
+            n /= minOpe
+        minOpe += 1
+    return nOpe
