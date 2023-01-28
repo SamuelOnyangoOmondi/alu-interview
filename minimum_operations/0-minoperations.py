@@ -11,13 +11,11 @@
 
 
 def minOperations(n):
-    if n <= 1:
-        return 0
-    operations = 0
-    i = 2
-    while i <= n:
-        while n % i == 0:
-            n = n // i
-            operations += 1
-        i += 1
-    return operations
+    nOpe = 0
+    minOpe = 2
+    while n > 1:
+        while n % minOpe == 0:
+            nOpe += minOpe
+            n /= minOpe
+        minOpe += 1
+    return nOpe
