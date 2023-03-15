@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 #include <stdio.h>
 int main() 
 {
